@@ -62,6 +62,12 @@ header .header-link.active {
     }
 }
 
+.sponsor-image {
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    background: #fff;
+}
+
 footer {
     padding: 5rem 0;
     background: #d3d9dd;

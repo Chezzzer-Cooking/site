@@ -16,9 +16,7 @@ page('*', (ctx) => {
     })
 })
 
-page({
-    hashbang:true
-})
+page()
 
 window.addEventListener('scroll', function() {
     if (window.pageYOffset == 0) {

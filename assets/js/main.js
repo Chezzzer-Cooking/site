@@ -16,7 +16,7 @@ page('*', (ctx) => {
     })
 })
 
-if (hostname.host == "chezzer.cooking") {
+if (location.host == "chezzer.cooking") {
     page()
 } else {
     page({

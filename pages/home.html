@@ -1,5 +1,16 @@
-<img src="/assets/img/banner.png" width="100%" height="700px" style="object-fit: cover;" alt="">
+<style>
+    .home-feature {
+        max-height: 700px;
+    }
+</style>
+<img src="/assets/img/banner.png" class="home-feature" width="100%" height="70%" style="object-fit: cover;" alt="">
 <div class="container py-5">
+    <div id="stream" style="display: none;">
+        <div class="d-block d-sm-flex mb-5">
+            <iframe class="rounded-start shadow" src="https://player.twitch.tv/?channel=coasters_and_crafters&amp;parent=chezzer.cooking" frameborder="0" allowfullscreen="true" scrolling="no" width="100%" style="aspect-ratio:16/9"></iframe>
+            <iframe class="rounded-end shadow d-none d-sm-block" src="https://www.twitch.tv/embed/coasters_and_crafters/chat?parent=chezzer.cooking"></iframe>
+        </div>
+    </div>
     <div class="d-flex w-100">
         <div class="mx-auto d-flex">
             <img src="https://coastersandcrafters.com/_assets/_img/communities/70_logo.png" width="64px" alt="">
@@ -15,7 +26,7 @@
     <div class="my-5 p-5">
         <div class="row">
             <div class="col-sm-7 my-auto">
-                <h1 class="display-1 fw-700">
+                <h1 class="display-1 fw-bolder">
                     The Chezzer Cooking Show
                 </h1>
                 <p class="w-75">
@@ -24,8 +35,16 @@
                 </p>
             </div>
             <div class="col-sm-5">
-                <img src="/assets/img/face.png" width="100%" class="my-auto" alt="">
+                <img src="/assets/img/face.png" width="100%" class="my-auto rounded shadow" alt="">
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $.get("https://decapi.me/twitch/viewercount/coasters_and_crafters", (live) => {
+        if (live !== "coasters_and_crafters is offline") {
+            $("#stream").fadeIn();
+        }
+    })
+</script>

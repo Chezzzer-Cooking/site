@@ -14,7 +14,7 @@ header {
     position: fixed;
     left:0;
     top:0;
-    padding: 3rem;
+    padding: 2rem;
     backdrop-filter: blur(5px);
     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
     transition: .3s background, .3s padding;
@@ -22,7 +22,7 @@ header {
 }
 
 header.active {
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     background: rgba(255,255,255,.9);
 }
 
@@ -38,6 +38,10 @@ header .header-link {
     border-radius: 25px;
 }
 
+header.active .header-link:hover {
+    color: #000;
+}
+
 header .header-link:hover {
     color: #fff;
     box-shadow: inset var(--accent) 0 0 0 3px;
@@ -47,6 +51,15 @@ header .header-link.active {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     background: var(--accent);
     color: #fff !important;
+}
+
+@media (max-width: 977px) {
+    header {
+        backdrop-filter: none !important;
+    }
+    header .header-link {
+        display: block;
+    }
 }
 
 footer {

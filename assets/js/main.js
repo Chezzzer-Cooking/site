@@ -16,7 +16,13 @@ page('*', (ctx) => {
     })
 })
 
-page()
+if (hostname.host == "chezzer.cooking") {
+    page()
+} else {
+    page({
+        hashbang:true
+    })
+}
 
 window.addEventListener('scroll', function() {
     if (window.pageYOffset == 0) {

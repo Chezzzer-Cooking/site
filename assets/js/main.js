@@ -1,7 +1,7 @@
 page('*', (ctx) => {
     page.currentPage = ctx;
     let path = ctx.path == "/" ? "home" : ctx.path;
-
+    $(window).scrollTop(0);
     $.ajax({
         url: `/pages/${path}.html`,
         success: (content) => {
